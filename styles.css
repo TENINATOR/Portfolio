@@ -1,10 +1,12 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
+    background-color: #f9f9f9;
 }
 .container {
     width: 80%;
@@ -18,6 +20,10 @@ header {
 }
 header h1 {
     margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    font-size: 1.2rem;
 }
 nav ul {
     padding: 0;
@@ -31,30 +37,97 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+
+/* Hero Section */
 #hero {
-    background: #f4f4f4;
+    background: #6c63ff;
+    color: white;
     padding: 2rem 0;
     text-align: center;
+    background-image: url('images/hero-bg.svg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 #hero h2 {
     font-size: 2.5rem;
+    opacity: 0;
+    animation: fadeInSlide 1.5s forwards;
 }
+#hero p {
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s;
+}
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Sections */
 .section {
     padding: 2rem 0;
 }
+
+/* Projects */
 .project-grid {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 .project-item {
-    background: #fff;
+    perspective: 1000px;
+    width: 100%;
+    max-width: 300px;
+}
+.project-content {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.project-item:hover .project-content {
+    transform: rotateY(180deg);
+}
+.project-front,
+.project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
+}
+.project-front {
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.project-item img {
+.project-front img {
     width: 100%;
-    height: auto;
+}
+.project-back {
+    transform: rotateY(180deg);
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+.project-item:hover img {
+    opacity: 0.8;
 }
 .project-item h3 {
     margin: 1rem 0;
@@ -62,15 +135,16 @@ nav ul li a {
 .project-item a.btn {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: #333;
+    background: #6c63ff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
 }
+
+/* Contact Section */
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
 }
