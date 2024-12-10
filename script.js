@@ -1,4 +1,4 @@
-// Throttled parallax effect for the hero background
+// Parallax effect for the hero background
 let lastScrollTop = 0;
 const hero = document.getElementById('hero');
 
