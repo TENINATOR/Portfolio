@@ -93,8 +93,8 @@ nav ul li a {
 }
 .project-item {
     perspective: 1000px;
-    width: 1000%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 200px;
 }
 .project-content {
     position: relative;
@@ -118,17 +118,19 @@ nav ul li a {
     padding: 1rem;
 }
 .project-front {
-    background-color: #65318d;
+    background-color: #ffc375;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .project-front img {
-    width: 100%;
+    width: 50%;
 }
 .project-back {
     transform: rotateY(180deg);
     background-color: #333;
     color: #fff;
-    text-align: center;
+    text-align: left;
+    text-size-adjust:inherit;
+    font-size: small;
 }
 .project-item:hover img {
     opacity: 0.8;
