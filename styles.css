@@ -1,7 +1,6 @@
 /* Global Styles */
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -85,40 +84,67 @@ nav ul li a {
     padding: 2rem 0;
 }
 
+/* Project Category Folder Container */
+.folder-container {
+    background: #5e4dff;
+    border-radius: 8px;
+    row-gap: 45px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    height: 100%;
+    transition: transform 0.3s;
+}
+.folder-container:hover {
+    transform: scale(1.05);
+}
+.folder-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    color: #fff;
+    text-align: center;
+}
+
 /* Projects */
 .project-grid {
     display: flex;
-    gap: 50px;
+    gap: 45;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .project-item {
-    perspective: 1000px;
+    perspective: 1000px; /* Enables 3D effect */
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
 }
+
 .project-content {
     position: relative;
     width: 100%;
-    height: 200px;
-    transition: transform 0.8s;
+    height: 150px;
     transform-style: preserve-3d;
+    transition: transform 0.8s;
 }
+
 .project-item:hover .project-content {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Rotates on hover */
 }
+
 .project-front,
 .project-back {
     position: absolute;
     width: 100%;
-    height: 80%;
-    backface-visibility: hidden;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when flipped */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
 }
+
 .project-front {
     background-color: #ffc375;
+    color: #333;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .project-front img {
@@ -129,31 +155,9 @@ nav ul li a {
     background-color: #333;
     color: #fff;
     text-align: left;
-    text-size-adjust:inherit;
     font-size: small;
 }
-.project-item:hover img {
-    opacity: 0.8;
-}
-.project-item h3 {
-    margin: 1rem 0;
-}
-.project-item a.btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #6c63ff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
-/* Contact Section */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
 /* Navigation Styles */
 nav ul {
     padding: 0;
@@ -199,3 +203,5 @@ nav ul li a {
 .dropdown-menu li a:hover {
     background-color: #6c63ff;
 }
+
+

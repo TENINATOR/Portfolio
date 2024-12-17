@@ -6,7 +6,54 @@
     <meta name="description" content="Technical Artist & Programmer Portfolio">
     <title>Teni Adegbite | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-   
+    <style>
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: #41c0ff;
+            color: #fff;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: #157d5e; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active {
+            transform: scale(0.98); /* Slight scale down effect on click */
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: #1e6253;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
@@ -38,15 +85,6 @@
             <h2>Welcome to My Portfolio!</h2>
             <p>Here you will see my projects in game development, robotics, and technical art.</p>
             <a href="#projects" class="btn"><button>View Projects</button></a>
-            <canvas id="glcanvas" width="640" height="480"></canvas>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm a passionate technical artist and programmer with experience in game development, robotics, and 3D work. My journey includes participating in Ubisoft Next 2024, winning 3rd place at the ENCANTUS OTU Case Competition, joining Ontario tech University's competitive Robotics team "Robomaster" as a Programmer, and being one of the representatives for my University at CAN-WiC 2024. I've worked on projects like a Flashcard app, Game making (In the Technical art, 3d modelling and Programming disciplines), and robotics experiments. I thrive at the intersection of tech and creativity which shows in my work :].</p>
         </div>
     </section>
 
@@ -55,112 +93,138 @@
         <div class="container">
             <h2>Projects</h2>
 
-            <!-- Robotics Projects -->
-            <div id="robotics" class="project-category">
+            <!-- Robotics -->
+            <div id="robotics" class="project-category folder-container">
                 <h3>Robotics</h3>
                 <div class="project-grid">
-                    <!-- Robotics Project uno -->
                     <div class="project-item">
                         <div class="project-content">
+                            <!-- Front of the card -->
                             <div class="project-front">
-                                <img src="images/robotics-project.png" alt="Robotics Project">
-                                <h3>Robotics Project</h3>
+                                <h4>RoboMaster</h4>
+                                <p>Programmed robots for the international RoboMaster competition with the Ontario Tech Robotics team.</p>
                             </div>
+                            <!-- Back of the card -->
                             <div class="project-back">
-                                <p>Not much can be said just </p>
-                                <a href="#" class="btn">See Code</a>
+                                <a href="https://www.robomasterna.com/" target="_blank"><button class="btn"> Learn More </button></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-            <!-- Technical Art Projects/ Tools -->
-            <div id="technical-art" class="project-category">
-                <h3>Technical Art Project/ Tools</h3>
+            <!-- Technical Art -->
+            <div id="technical-art" class="project-category folder-container">
+                <h3>Technical Art</h3>
                 <div class="project-grid">
-                    <!-- Technical Art Project uno -->
                     <div class="project-item">
                         <div class="project-content">
+                            <!-- Front of the card -->
                             <div class="project-front">
-                                <img src="images/technical-art.png" alt="Technical Art Project">
-                                <h3>Technical Art Project</h3>
+                                <h4>Rubble Generator</h4>
+                                <p>A Unity-based procedural tool for generating rubble using custom scripts.</p>
                             </div>
+                            <!-- Back of the card -->
                             <div class="project-back">
-                                <p>Shader</p>
-                                <a href="#" class="btn">See Code</a>
+                                <a href="https://github.com/Teninator/Rubble-generator" target="_blank" class="btn"><button>See Code</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-content">
+                            <!-- Front of the card -->
+                            <div class="project-front">
+                                <h4>Shader Experiments</h4>
+                                <p>Created custom shaders for visual effects and optimized materials.</p>
+                            </div>
+                            <!-- Back of the card -->
+                            <div class="project-back">
+                                <a href="https://github.com/Teninator/Shader-experiments" target="_blank" class="btn"><button>See Code</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Game Development Projects -->
-            <div id="game-development" class="project-category">
+            <!-- Game Development -->
+            <div id="game-development" class="project-category folder-container">
                 <h3>Game Development</h3>
                 <div class="project-grid">
-                    <!-- Game Development Project uno -->
                     <div class="project-item">
                         <div class="project-content">
+                            <!-- Front of the card -->
                             <div class="project-front">
-                                <img src="images/game-development.png" alt="Game Development Project">
-                                <h3>Chaotic Good</h3>
+                                <h4>Chaotic Good</h4>
+                                <p>An innovative game blending creative storytelling and gameplay mechanics.</p>
                             </div>
+                            <!-- Back of the card -->
                             <div class="project-back">
-                                <p>Coming soon!</p>
-                                <a href="#" class="btn">Check out my itch.io</a>
+                                <a> WIP!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-content">
+                            <!-- Front of the card -->
+                            <div class="project-front">
+                                <h4>Time Manager</h4>
+                                <p>Unity script for customizable day-night cycles, including shaders and lighting control.</p>
+                            </div>
+                            <!-- Back of the card -->
+                            <div class="project-back">
+                                <a href="https://github.com/Teninator/Time-manager" target="_blank" class="btn"><button>See Code</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Programming Projects -->
-            <div id="programming" class="project-category">
+            <!-- Programming -->
+            <div id="programming" class="project-category folder-container">
                 <h3>Programming</h3>
                 <div class="project-grid">
-                    <!-- Programming Un -->
                     <div class="project-item">
                         <div class="project-content">
+                            <!-- Front of the card -->
                             <div class="project-front">
-                                <img src="images/programming-project.png" alt="Programming Project">
-                                <h3>Gith</h3>
+                                <h4>White Balance Tool</h4>
+                                <p>A white balance correction application for image and video processing.</p>
                             </div>
+                            <!-- Back of the card -->
                             <div class="project-back">
-                                <p>Description of your programming project.</p>
-                                <a href="#" class="btn">See Code</a>
+                                <a>Coming soon</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Programming Deux -->
                     <div class="project-item">
                         <div class="project-content">
+                            <!-- Front of the card -->
                             <div class="project-front">
-                                <img src="images/programming-project.png" alt="Programming Project">
-                                <h3>Gith</h3>
+                                <h4>Travel Diary App</h4>
+                                <p>Fully responsive app with dark mode, filters, and navigation for diary entries.</p>
                             </div>
+                            <!-- Back of the card -->
                             <div class="project-back">
-                                <p>Description of your programming project.</p>
-                                <a href="#" class="btn">See Code</a>
+                                <a href="https://github.com/Teninator/diary-filter-app" target="_blank" class="btn"><button>See Code</button></a>
                             </div>
                         </div>
                     </div>
-                    <!-- Programming Trois -->
                     <div class="project-item">
                         <div class="project-content">
+                            <!-- Front of the card -->
                             <div class="project-front">
-                                <img src="images/programming-project.png" alt="Programming Project">
-                                <h3>Gith</h3>
+                                <h4>AR Shopping Experience</h4>
+                                <p>Prototype for augmented reality-based shopping, allowing virtual try-ons.</p>
                             </div>
+                            <!-- Back of the card -->
                             <div class="project-back">
-                                <p>Description of your programming project.</p>
-                                <a href="#" class="btn">See Code</a>
+                                <a href="https://github.com/Teninator/ar-shopping" target="_blank" class="btn"><button>See Code</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -168,7 +232,7 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
-            <p>If you’re interested in collaborating, feel free to reach out to me via email or connect on GitHub :].</p>
+            <p>Let’s connect and create something amazing together!</p>
             <a href="mailto:oluwateniolaadegbite@gmail.com" class="btn"><button>Email Me</button></a>
         </div>
     </section>
@@ -179,8 +243,5 @@
             <p>© 2024 Teni Adegbite. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
-    <script src="test.js" type="module"></script> 
 </body>
 </html>
